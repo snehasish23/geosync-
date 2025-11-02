@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0e14;
+  --foreground: #e8f3ff;
+  --gs-teal: #00c2b2;
+  --gs-turquoise: #1fd6d4;
+  --gs-blue: #1b8fff;
+  --gs-accent: #6ae2ff;
+  --gs-gradient: linear-gradient(135deg, var(--gs-teal), var(--gs-turquoise), var(--gs-blue));
+  --gs-gradient-soft: linear-gradient(135deg, rgba(0, 194, 178, 0.1), rgba(31, 214, 212, 0.1), rgba(27, 143, 255, 0.1));
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-gs-teal: var(--gs-teal);
+  --color-gs-turquoise: var(--gs-turquoise);
+  --color-gs-blue: var(--gs-blue);
+  --color-gs-accent: var(--gs-accent);
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0e14;
+    --foreground: #e8f3ff;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system,
+    Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  overflow-x: hidden;
+}
+
+.brand-gradient {
+  background-image: var(--gs-gradient);
+}
+
+.brand-gradient-text {
+  background: var(--gs-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.brand-ring {
+  --tw-ring-color: color-mix(in oklab, var(--gs-blue) 70%, transparent);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: border-color 300ms ease, box-shadow 300ms ease, background 300ms ease;
+}
+
+.glass-card-hover {
+  transition: all 0.3s ease;
+}
+
+.glass-card-hover:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -12px rgba(27, 143, 255, 0.15);
+}
+
+.gradient-border {
+  position: relative;
+  background: var(--background);
+  border-radius: 1rem;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  padding: 1px;
+  background: var(--gs-gradient);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  color: #000;
+  font-weight: 600;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px -5px rgba(27, 143, 255, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px -5px rgba(27, 143, 255, 0.5);
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+.glow-effect {
+  box-shadow: 0 0 40px -10px rgba(27, 143, 255, 0.4);
+}
+
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
