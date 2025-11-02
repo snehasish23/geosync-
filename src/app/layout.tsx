@@ -78,11 +78,31 @@ export const metadata: Metadata = {
   },
   category: "Technology",
   classification: "Business",
-  icons: {
-    icon: "/favicon.png",
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
-  },
+  icons: [
+    {
+      rel: "icon",
+      url: "/favicon-light.svg",
+      media: "(prefers-color-scheme: light)",
+    },
+    {
+      rel: "icon", 
+      url: "/favicon-dark.svg",
+      media: "(prefers-color-scheme: dark)",
+    },
+    {
+      rel: "icon",
+      url: "/favicon-light.svg", // fallback
+    },
+    {
+      rel: "shortcut icon",
+      url: "/favicon-light.svg",
+    },
+    {
+      rel: "apple-touch-icon",
+      url: "/favicon-light.svg",
+      sizes: "180x180",
+    },
+  ],
 };
 
 export default function RootLayout({
