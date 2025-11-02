@@ -16,11 +16,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.geosync.agency"),
   title: {
-    default: "GeoSync Agency | Digital Solutions for Schools & Businesses",
+    default: "GeoSync Agency | Tech Solution & SEO Expert",
     template: "%s | GeoSync Agency",
   },
   description:
-    "GeoSync Agency leads digital transformation, managing multiple brands for business and educational institutions. Specializing in school management systems (GeoEduSync) and comprehensive SEO services. Transform your operations with cutting-edge technology.",
+    "GeoSync Agency delivers tech solutions and SEO expertise to help businesses, schools, and organizations grow online with smart automation and proven strategies.",
   keywords: [
     "digital solutions",
     "school management system",
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "GeoSync Agency | Digital Solutions for Schools & Businesses",
+    title: "GeoSync Agency | Tech Solution & SEO Expert",
     description:
-      "Empowering institutions and businesses through smart digital solutions. School management systems and comprehensive SEO services.",
+      "GeoSync Agency delivers tech solutions and SEO expertise to help businesses, schools, and organizations grow online with smart automation and proven strategies.",
     type: "website",
     siteName: "GeoSync Agency",
     url: "https://www.geosync.agency",
@@ -67,9 +67,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GeoSync Agency | Digital Solutions for Schools & Businesses",
+    title: "GeoSync Agency | Tech Solution & SEO Expert",
     description:
-      "Empowering institutions and businesses through smart digital solutions. School management systems and comprehensive SEO services.",
+      "GeoSync Agency delivers tech solutions and SEO expertise to help businesses, schools, and organizations grow online with smart automation and proven strategies.",
     site: "@geosyncagency",
     creator: "@geosyncagency",
   },
